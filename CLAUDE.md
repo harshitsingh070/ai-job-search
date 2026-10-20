@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Harshit Singh
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Harshit Singh, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +10,87 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Harshit Singh
+- **Location:** Greater Noida, India (location flexible - remote preferred; NCR onsite/hybrid and relocation within India acceptable)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | Hindi | Native |
+  | English | Professional working proficiency |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Final-year B.Tech Information Technology student (graduating 2027). Seeking internships and entry-level software engineering roles.
+- **LinkedIn headline:** "Final-Year B.Tech IT Student | Java & Spring Boot Backend Developer | AI-Integrated Projects" <!-- editable - update to taste -->
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.Tech in Information Technology** (2023-2027, in progress - expected 2027) - Dronacharya Group of Institutions, Greater Noida, India
+  - CGPA: 7.21
+  - Topics: Data structures and algorithms, OOP, DBMS, operating systems
+- **Class XII (CBSE), 80%** (2023) - Saraswati V Mandir Vivekanand Nagar, Sultanpur, Uttar Pradesh
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Open Source Contributor** (Mar 2026 - Present) - **Apache Wayang, Apache Software Foundation** (Remote)
+  - 4 merged pull requests in a distributed data-processing framework: fixed empty-list handling in `JavaReduceByOperator` (PR #837); restored the JDBC connection lifecycle in `GenericJdbcExecutor` after diagnosing a null-connection bug, adding 4 regression tests (PR #809); root-caused and fixed a non-deterministic JVM native-memory crash in `TensorflowModelTest` (PR #781); authored JDBC driver documentation (PR #722)
+  - All changes passed full CI and maintainer code review
+
+- **Independent Projects** (see `01-candidate-profile.md` for detail)
+  - **MatchIQ**: AI-native ATS platform (Spring Boot + FastAPI + React + PostgreSQL/pgvector, LLM/RAG matching)
+  - **Discipify**: live full-stack productivity app (Spring Boot + React, [live](https://focusforge-frontend.vercel.app/))
+  - **Synthetic Media Detector**: ML inference + Spring Boot + Docker microservices
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Java (Spring Boot, Spring Security), Python (FastAPI), REST API design, PostgreSQL, DSA fundamentals
+- **Secondary:** React, JavaScript/TypeScript, Docker, CI/CD, AWS fundamentals (IAM/EC2/S3), LLM/RAG integration (OpenRouter, Groq, sentence-transformers, pgvector)
+- **Domain:** Backend/API engineering; AI-integrated product development
+- **Software:** Git, Postman, JUnit, Linux/Unix CLI, Supabase, Docker; AI-assisted development (Claude Code, GitHub Copilot, Cursor)
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **AWS Cloud Essentials Knowledge Badge** - AWS - completed 2026
+- **Oracle Java Foundations** - Oracle - completed Aug 2025
+- **SQL Essential Training** - LinkedIn Learning - completed Dec 2025
+- **Generative AI** - Microsoft / PW Skills - completed Mar 2026
+- **Google AI Essentials** - Google - completed 2025
+- **Networking Basics** - Cisco - completed 2025
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- 450+ DSA problems solved (200+ Medium, 70+ Hard) - LeetCode/GeeksforGeeks (2025-2026)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- Inferred from CV/project evidence - no formal assessment (PI, DISC, Myers-Briggs) yet. Review 02-behavioral-profile.md. -->
+- **Self-directed builder** - shipped 3 projects (one live) and 4 merged OSS PRs while a full-time student
+- **Debugging persistence** - root-caused a non-deterministic JVM crash in an unfamiliar large codebase
+- **Strengths:** ownership, shipping real systems, written async collaboration through code review
+- **Growth areas:** no industry team experience yet (frame as "already working like a professional engineer")
+- **Thrives in:** remote/hybrid, code-review-driven, mentorship-rich teams with real ownership
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+<!-- What motivates you professionally; inferred - edit freely -->
+- Building production systems end to end and shipping to real users
+- Combining backend engineering with AI/LLM integration
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+<!-- Industries and companies you're targeting; inferred - edit freely -->
+- Software product companies and SaaS startups (India, remote-friendly): any hiring interns / junior backend or full-stack engineers
+- Teams using Java/Python backends with AI-integrated products
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- None recorded yet (location flexible; no fixed stipend expectation). Update as they emerge - e.g. unpaid training-only programs with no real code ownership.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

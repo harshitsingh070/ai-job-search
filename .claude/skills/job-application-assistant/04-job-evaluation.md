@@ -10,6 +10,8 @@ framework_version: 1.2.6
 
 If the candidate is not a citizen or permanent resident of the country they are applying in, run this first. It is a hard filter, not a scoring dimension, and it is separate from work-permit *timing*: timing asks "can they work the required hours yet?", eligibility asks "are they permitted to hold this job at all?". A candidate can pass timing and still be categorically excluded.
 
+**Profile note (Harshit):** Indian citizen applying within India - this gate passes by default for Indian postings and activates only for postings abroad.
+
 Read the posting's eligibility / work rights / "who can apply" section **verbatim** and classify:
 
 | Posting wording | Verdict |
@@ -60,9 +62,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Java, Spring Boot, Spring Security, REST API design, Python, FastAPI, PostgreSQL (schema design, indexing), JWT authentication, debugging complex codebases, DSA fundamentals
+**Moderate match areas:** React and frontend work, TypeScript, Docker, CI/CD, AWS fundamentals (IAM/EC2/S3), LLM/RAG integration (project-level, not industry)
+**Weak match areas:** professional industry experience (none yet), production-scale distributed systems operations, cloud infrastructure beyond fundamentals
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +76,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** hands-on software engineering through merged open-source contributions (Apache Wayang) and self-built production-style systems (Java/Spring Boot, Python/FastAPI, React)
+**Moderate:** coursework-level exposure (C/C++, OS, DBMS); adjacent AI/ML project work (synthetic media classification, RAG pipelines)
+**Entry-level:** internships and fresher/junior roles where projects and open-source work substitute for employment history - strong DSA (450+ problems) and fundamentals support this tier
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -93,7 +95,7 @@ Does the role and company culture match the behavioral profile?
 ### 4. Location & Logistics (Pass/Fail + Notes)
 - Within commute range: PASS
 - Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- Remote: PASS (primary target). Delhi-NCR onsite/hybrid: PASS. Relocation within India: PASS (location is flexible - relocation is not a deal-breaker)
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -107,19 +109,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Start a software engineering career (internship, then junior/entry-level) with a backend focus (Java/Spring Boot, Python/FastAPI), ideally in a product company
+- Grow toward production-scale backend and distributed-systems engineering
+- Continue integrating AI/LLM capabilities into real products (RAG, embeddings, LLM APIs)
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: building real production systems end to end, debugging hard and ambiguous problems in large codebases, shipping features to real users, learning new tech stacks
+- Tasks that drain: maintenance-only work with no ownership, roles with no growth or learning
+- Non-task factors: mentorship and code-review culture, autonomy with clear goals, remote/hybrid flexibility
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: final-year student entering the job market; internship-to-full-time conversion (PPO) is a plus, not a requirement; no fixed stipend baseline
+- **Flexibility**: available full-time; location flexible (remote preferred, NCR or relocation acceptable)
+- **Professional development**: mentorship, code review, and production-system exposure are the top priorities
 
 ### 6. Salary Benchmark (Optional)
 

@@ -182,13 +182,14 @@ The `source` field records which mechanism produced the entry: `cli` for Step 1b
 3. Only present jobs NOT already in the seen list (matched by URL or
    company+title) or tracker.
 
-### Step 4.5: Generate Referral Contact Links (High & Medium Fit Only)
+### Step 4.5: Generate Referral Contacts & Outreach Drafts (High & Medium Fit Only)
 
 For every job from this run with `fit` of **high** or **medium** (skip low-fit jobs),
-build two LinkedIn people-search URLs so the user can find a recruiter or team member to
-reach out to for a referral or a warm intro. This is deliberately a link-generation step,
-not an automated lookup: no scraping, no third-party API, zero runtime dependencies or
-credentials required.
+do both of the following: build two LinkedIn people-search URLs so the user can find a
+recruiter or team member to reach out to for a referral or a warm intro, and draft the
+referral outreach messages to send them. This is deliberately a link-generation and
+drafting step, not an automated lookup: no scraping, no third-party API, no messages sent,
+zero runtime dependencies or credentials required.
 
 **A. Recruiters / Talent Acquisition (the referral path)**
 ```
@@ -202,9 +203,21 @@ https://www.linkedin.com/search/results/people/?keywords=<url-encoded "<Company 
 Use a short keyword drawn from the posting's title for `<role keyword>` - e.g. a posting
 titled "AI Program Manager" becomes `"<Company Name> AI Program Manager"`.
 
+**C. Referral outreach drafts (both contact types).** For the same high/medium-fit jobs,
+draft two short LinkedIn messages the user can send: one to a recruiter/talent person (the
+referral ask) and one to a peer on the team (the warm-intro / advice ask). Each message
+names the exact role title and company from the posting and carries one verified profile
+proof point chosen for the role's stack. Follow `referral-outreach.md` (this directory) for
+the message anatomy, the proof-point mapping, and the writing-style constraints. Write
+every draft to `job_scraper/outreach/YYYY-MM-DD_referral_outreach.md` (run date), organized
+by the Step 5 table number, one section per job with its posting URL and both contact
+links. Drafts are never sent, and recipient names stay as `[Name]` placeholders until the
+user personalizes them.
+
 Both links are for the user to open and browse themselves - never fetch or scrape the
 LinkedIn people-search result pages programmatically. Never fabricate contacts or claim a
-specific person was found; these are search links, not results.
+specific person was found; these are search links, not results - and the same principle
+governs the C drafts (`[Name]` placeholders, no invented recipients).
 
 ### Step 4.75: Portal Health Check
 
@@ -266,6 +279,11 @@ For each high/medium-fit job from Step 4.5, add a short contacts block with the 
 LinkedIn search links:
 - Recruiters/TA search link, for the referral path
 - Role/team-peer search link, for the warm-intro / informational-outreach path
+
+### Referral Messages
+Referral outreach drafts for every high/medium-fit job (recruiter/talent + peer variants)
+are written to `job_scraper/outreach/YYYY-MM-DD_referral_outreach.md`, numbered to match
+the table above. Point the user to that file; do not paste all drafts into the report.
 ```
 
 After presenting, ask:
@@ -292,3 +310,4 @@ If the user decides to apply to any job, the tracker row is written by **job-app
 7. **No automated people lookups.** Referral contacts (Step 4.5) are LinkedIn search links only - never fetch or scrape LinkedIn people-search result pages programmatically.
 8. **Health checks are bounded and honest.** Step 4.75 spends at most one probe, one retry, and (in `health` mode) one detail fetch per portal - a diagnosis, not a crawl. A rate-limit is never evidence of breakage. Health verdicts come only from observed CLI output; a portal that could not be tested is reported as inconclusive, never guessed. The `enabled` toggle is the only thing the health check may edit, and only with confirmation.
 9. **Flag distribution patterns, never accuse.** The mass-posting signal (Step 2.5) describes how a listing is being distributed, not a claim that the employer is a scam. Never name a company as fraudulent or untrustworthy - present the observation and let the user decide.
+10. **Outreach drafts stay drafts.** Referral messages (Step 4.5C) are written to disk per `referral-outreach.md`; `/scrape` never sends them, never resolves them to a specific person, and never claims a referral was arranged. Recipient names remain `[Name]` placeholders, and every message uses only verified profile facts.

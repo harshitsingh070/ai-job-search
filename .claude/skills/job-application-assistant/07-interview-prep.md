@@ -4,45 +4,83 @@ framework_version: 1.0.0
 
 # Interview Preparation Guide
 
-<!-- SETUP: STAR examples are personalized by running /setup based on your actual experience -->
-
 ## STAR Format
 
 Structure answers as: **Situation** (context), **Task** (your responsibility), **Action** (what you did), **Result** (outcome).
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## Ready-Made STAR Examples
+## STAR Candidates (Complete Manually)
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+<!-- Added by /setup from CV and project evidence. Fill in situation/task/action/result before using them in interviews. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Apache Wayang - non-deterministic JVM crash hunt (debugging, persistence)
+**Source:** CV - Apache Wayang PR #781 (merged)
+**What happened:** `TensorflowModelTest` failed intermittently with a SIGABRT during Maven teardown ("forked VM terminated without properly saying goodbye"). Traced it to unclosed EagerSession/Tensor resources racing garbage collection at JVM shutdown; fixed with try-with-resources and removed eager operations.
+**Why it matters:** "hardest bug" questions, debugging methodology, working in unfamiliar codebases.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Apache Wayang - JDBC connection lifecycle fix (root-cause analysis, quality bar)
+**Source:** CV - Apache Wayang PR #809 (merged)
+**What happened:** Found `GenericJdbcExecutor`'s connection initialization silently commented out, leaving a null connection; restored the lifecycle against the current API and added 4 regression tests with all CI checks passing.
+**Why it matters:** "tell me about a bug you found", code-quality and testing-discipline questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Apache Wayang - landing changes through review (communication, feedback)
+**Source:** CV - Apache Wayang PRs #722, #809, #837
+**What happened:** Iterated through multiple rounds of maintainer review to land documentation and bug fixes in an Apache project, adjusting the approach each round.
+**Why it matters:** teamwork/feedback questions, remote collaboration, handling criticism.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### MatchIQ - designing a multi-tier AI platform (system design, ownership)
+**Source:** CV - MatchIQ project
+**What happened:** Built a Spring Boot + FastAPI + React system with PDF ingestion, embeddings, pgvector similarity search, multi-provider LLM fallback chains, and JWT-secured role-based access across three user types.
+**Why it matters:** architecture questions, full-stack ownership, AI integration judgment.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Discipify - zero to live deployment (initiative, shipping)
+**Source:** CV - Discipify project (live at focusforge-frontend.vercel.app)
+**What happened:** Designed 10+ REST APIs, optimized database access through indexing, built an admin dashboard, and shipped a live deployment solo.
+**Why it matters:** "initiative" and "something you shipped" questions, prioritization.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 450+ DSA problems solved (consistency, fundamentals)
+**Source:** CV - achievements
+**What happened:** Solved 450+ problems (200+ Medium, 70+ Hard) across LeetCode and GeeksforGeeks while studying full-time.
+**Why it matters:** consistency/discipline questions, stamina for technical screens.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
 ## Common Tough Questions
 
+### "You don't have professional experience yet - why should we hire you?"
+> Bridge: merged Apache Wayang PRs went through the same CI and maintainer-review discipline as professional work, and production-style systems were built and deployed solo (one live). The gap between that and a first job is team context, not capability. Anchor with PR #781/#809 and the Discipify live deployment; close with eagerness to learn inside a team with code review.
+
 ### "Why did you leave [previous company]?"
-> [PREPARE YOUR ANSWER - be honest, forward-looking, no negativity about former employer]
+> Not applicable (no employment history yet) - drop this question in practice.
 
 ### "You don't have [specific skill/experience]."
 > [PREPARE YOUR ANSWER - acknowledge the gap, bridge to adjacent experience, show willingness to learn]

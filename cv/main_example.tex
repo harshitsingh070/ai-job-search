@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Harshit Singh
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -40,7 +39,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Harshit Singh - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -50,13 +49,13 @@
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
+\name{Harshit}{Singh}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\address{Greater Noida, India}{}{}
+\phone[mobile]{+91 9794986314}
+\email{harshitsingh2807@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/harshitsinggh070/}{LinkedIn}, \href{https://github.com/harshitsingh070}{GitHub}}
 
 \begin{document}
 
@@ -67,7 +66,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Final-year B.Tech IT student (graduating 2027) with 4 merged pull requests in Apache Wayang, a distributed data-processing framework at the Apache Software Foundation, and a track record of shipping complete systems: a multi-tier AI matching platform (Spring Boot, FastAPI, React, PostgreSQL/pgvector) and a live full-stack product. Strong backend fundamentals in Java, Python, and SQL, with 450+ DSA problems solved. Seeking a software engineering internship where real ownership and code review accelerate growth.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -77,52 +76,65 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Backend Engineering}: Java, Spring Boot, Spring Security, Python, FastAPI, REST API design, JWT authentication, microservices.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Databases}: PostgreSQL (schema design, joins, indexing, query optimization), pgvector, Supabase, SQL.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{AI Integration}: LLM APIs (OpenRouter, Groq), RAG pipelines, embeddings (sentence-transformers), vector similarity search; AI-assisted development with Claude Code, GitHub Copilot, and Cursor.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Frontend}: React, JavaScript/TypeScript, HTML/CSS.
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Tools \& Practices}: Git, Docker, CI/CD, AWS fundamentals (IAM, EC2, S3), JUnit, Postman, Linux/Unix CLI, debugging, and regression testing.
 
 \end{itemize}
 
 % ============================================================
-%     PROFESSIONAL EXPERIENCE
+%     OPEN SOURCE EXPERIENCE
 % ============================================================
 
-\section{Professional Experience}
+\section{Open Source Experience}
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Mar 2026 - Present}{Open Source Contributor}{Apache Wayang, Apache Software Foundation}{Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
+    \item {Root-caused a non-deterministic JVM native-memory crash in the test suite (\href{https://github.com/apache/wayang/pull/781}{PR \#781, merged}) by tracing unclosed EagerSession/Tensor resources racing garbage collection at JVM shutdown in an unfamiliar large-scale codebase; validated the fix by reproducing the crash and re-testing.}
+    \item {Diagnosed a null-connection bug in \texttt{GenericJdbcExecutor} where connection initialization had been commented out; restored the JDBC connection lifecycle against the current API and added 4 regression tests with all CI checks passing (\href{https://github.com/apache/wayang/pull/809}{PR \#809, merged}).}
+    \item {Fixed empty-list handling in \texttt{JavaReduceByOperator}, where grouped values were discarded when the second list was empty (\href{https://github.com/apache/wayang/pull/837}{PR \#837, merged}).}
+    \item {Authored JDBC driver documentation through multiple rounds of maintainer review (\href{https://github.com/apache/wayang/pull/722}{PR \#722, merged}).}
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     PROJECTS
+% ============================================================
+
+\section{Projects}
+\vspace{3pt}
+\begin{itemize}
+
+\item{\cventry{Jul 2026 - Present}{MatchIQ - AI-Native ATS Platform}{Personal Project}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item {Built a multi-tier system (Spring Boot 3.3 / Java 21, Python FastAPI, React, PostgreSQL/pgvector) with PDF parsing, 384-dim embeddings, and cosine-similarity ranking through a pgvector ivfflat index.}
+    \item {Designed multi-provider LLM fallback (OpenRouter, Groq) for fault tolerance plus deterministic regex-based skill-gap analysis as a non-LLM fallback path.}
+    \item {Implemented JWT-secured role-based access across Student, Recruiter, and Placement-Cell dashboards on a 7-table schema.}
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Feb 2026 - Present}{Discipify - Gamified Productivity Platform}{Personal Project (live)}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
+    \item {Designed and shipped 10+ REST APIs with Spring Boot, JWT authentication, and PostgreSQL persistence; built an admin dashboard and tested auth, validation, and data-integrity edge cases.}
+    \item {Improved database access through PostgreSQL indexing and streamlined API contracts to reduce unnecessary client-server round trips. \href{https://focusforge-frontend.vercel.app/}{Live deployment}.}
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Aug 2025}{Synthetic Media Detector}{Personal Project}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
+    \item {Integrated an ML inference pipeline with Spring Boot REST APIs for real-time synthetic-media classification.}
+    \item {Containerized services with Docker and wrote integration tests covering API contracts, inter-service failures, and edge cases.}
 \end{itemize}}}
 
 \end{itemize}
@@ -135,14 +147,14 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{2023-2027}{B.Tech in Information Technology}{Dronacharya Group of Institutions}{Greater Noida, India}{}{\vspace{1pt}
+In progress, expected 2027. CGPA: 7.21. Key topics: data structures and algorithms, OOP, DBMS, operating systems.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
+\item{\cventry{2023}{Class XII (CBSE), 80\%}{Saraswati V Mandir Vivekanand Nagar}{Sultanpur, India}{}{\vspace{1pt}
+Science stream.
 }}
 
 \end{itemize}
@@ -154,27 +166,23 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
+\item {Hindi (native), English (professional working proficiency).}
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
+%     CERTIFICATIONS AND ACHIEVEMENTS
 % ============================================================
 
-\section{Publications}
+\section{Certifications and Achievements}
 \vspace{1pt}
 \begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{450+ DSA problems solved (200+ Medium, 70+ Hard) across LeetCode and GeeksforGeeks.}
+\item{\textbf{AWS Cloud Essentials Knowledge Badge} - AWS (2026).}
+\item{\textbf{Oracle Java Foundations} - Oracle (Aug 2025).}
+\item{\textbf{SQL Essential Training} - LinkedIn Learning (Dec 2025).}
+\item{\textbf{Generative AI} - Microsoft / PW Skills (Mar 2026).}
+\item{\textbf{Google AI Essentials} - Google (2025).}
+\item{\textbf{Networking Basics} - Cisco (2025).}
 \end{itemize}
 
 % ============================================================

@@ -17,3 +17,8 @@ To prevent duplication and configuration drift across different AI agent framewo
    - Do not duplicate these rules or specifications. Treat `.claude/` files as the single source of truth.
 3. **Portal Search Skills:**
    - Job-portal search CLIs live under [.agents/skills/](.agents/skills/) in the portable Agent Skills format (with a `SKILL.md` per portal). Codex and Antigravity discover these automatically; the `/scrape` workflow in [.claude/skills/job-scraper/](.claude/skills/job-scraper/) orchestrates them.
+4. **opencode Runtime:**
+   - opencode natively discovers the skills under `.claude/skills/` and `.agents/skills/`, so they need no copy.
+   - [opencode.json](opencode.json) loads the candidate profile ([CLAUDE.md](CLAUDE.md)) as instructions and mirrors the pre-approved tool permissions from [.claude/settings.json](.claude/settings.json).
+   - The [.opencode/](.opencode/) directory holds only thin pointers: each `.opencode/command/*.md` wrapper executes its canonical specification under `.claude/` (usually a `.claude/commands/*.md` file; `scrape` and `upskill` point at their `.claude/skills/*/SKILL.md`), and `.opencode/agent/*.md` points at its `.claude/agents/*.md` definition. Nothing here duplicates workflow content - edit `.claude/` and the wrappers follow.
+   - Full opencode guide (how to run, commands, skills, troubleshooting): [.opencode/README.md](.opencode/README.md).

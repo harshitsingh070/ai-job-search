@@ -59,7 +59,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Harshit Singh - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -69,13 +69,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Harshit}{Singh}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Greater Noida, India}{}{}
+\phone[mobile]{+91 9794986314}
+\email{harshitsingh2807@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/harshitsinggh070/}{LinkedIn}, \href{https://github.com/harshitsingh070}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -136,12 +136,14 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For software engineering intern / backend (Java, Spring Boot) roles:**
+> Final-year B.Tech IT student (graduating 2027) with 4 merged pull requests in Apache Wayang, a distributed data-processing framework at the Apache Software Foundation, and self-built production systems in Java/Spring Boot and Python. Strongest in backend engineering: REST API design, PostgreSQL schema work, JWT auth, and debugging complex codebases, with 450+ DSA problems solved across LeetCode and GeeksforGeeks.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For full-stack / AI-integrated product roles:**
+> Final-year B.Tech IT student (graduating 2027) who builds AI-integrated products end to end: a multi-tier ATS matching platform (Spring Boot + FastAPI + React + PostgreSQL/pgvector) with embedding-based matching and LLM-generated explanations, and a live gamified productivity app. Comfortable across REST APIs, React UIs, PostgreSQL, Docker, and LLM/RAG integration, with merged open-source contributions to Apache Wayang.
+
+**For general software development intern roles:**
+> Final-year B.Tech IT student (graduating 2027) with proven ownership of real codebases: 4 merged Apache Wayang PRs (including root-causing a non-deterministic JVM crash), plus three self-built projects, one live. Solid fundamentals in Java, Python, DSA (450+ problems), SQL, and Git-based collaboration through full code-review processes.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
